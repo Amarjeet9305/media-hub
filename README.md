@@ -12,6 +12,7 @@ cd frontend
 npm install
 npm run dev
 Visit http://localhost:3000 for the home page and http://localhost:3000/articles/<slug> for individual stories. Run npm run lint before submitting.
+
 **Ready to Run server**
 <img width="1366" height="768" alt="Screenshot (528)" src="https://github.com/user-attachments/assets/fc62d16a-fbab-4301-94c6-6d33e3dc95ba" />
 
@@ -20,6 +21,10 @@ Visit http://localhost:3000 for the home page and http://localhost:3000/articles
 
 **Include all type Article in LiveHindiस्ट्रीट**
 <img width="1366" height="768" alt="Screenshot (530)" src="https://github.com/user-attachments/assets/eacd9ceb-623e-47c6-b559-267d4e1093b5" />
+
+**Contact to LiveHindiस्ट्रीट**
+
+<img width="1366" height="768" alt="Screenshot (533)" src="https://github.com/user-attachments/assets/19722f12-70f7-4fa3-969b-569bcdee9fb7" />
 
 
 **Project Structure**
