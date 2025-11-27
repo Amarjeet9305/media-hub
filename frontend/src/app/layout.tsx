@@ -4,6 +4,8 @@ import { Inter, Noto_Sans_Devanagari, Outfit } from 'next/font/google';
 
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { normalizeLanguage } from '@/utils/language';
 
 import './globals.css';
@@ -43,15 +45,18 @@ export default async function RootLayout({
   const language = normalizeLanguage(cookieStore.get('origin_lang')?.value);
 
   return (
-    <html lang={language}>
+    <html lang={language} suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${inter.variable} ${notoHindi.variable} bg-slate-50 text-slate-900 antialiased`}
+        className={`${outfit.variable} ${inter.variable} ${notoHindi.variable} bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100`}
       >
-        <div className="flex min-h-screen flex-col">
-          <SiteHeader language={language} />
-          {children}
-          <SiteFooter />
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader language={language} />
+            {children}
+            <SiteFooter />
+            <ThemeToggle />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

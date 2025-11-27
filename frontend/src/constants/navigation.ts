@@ -3,6 +3,7 @@ import type { LanguageCode } from '@/types/language';
 export type NavLink = {
   id: string;
   label: string;
+  href?: string;
 };
 
 export const NAV_LINKS: NavLink[] = [
@@ -13,6 +14,7 @@ export const NAV_LINKS: NavLink[] = [
   { id: 'jobs', label: 'जॉब्स' },
   { id: 'lifestyle', label: 'लाइफस्टाइल' },
   { id: 'technology', label: 'टेक्नोलॉजी' },
+  { id: 'contact', label: 'संपर्क', href: '/contact' },
 ];
 
 type CopyMap = Record<LanguageCode, string>;
